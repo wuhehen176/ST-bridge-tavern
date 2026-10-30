@@ -84,3 +84,8 @@ curl.exe http://127.0.0.1:43121/v1/bridge/context/receipts
 ## 许可
 
 AGPL-3.0，见 [LICENSE](LICENSE)。
+
+
+## 0.4.2 HTTP 兼容修复
+
+支持通过局域网 HTTP 地址打开酒馆：浏览器缺少 `crypto.subtle` 或 `crypto.randomUUID` 时，请求仍可适配和发送。摘要保持标准 SHA-256，与桥接的回执及世界书来源校验一致。更新后刷新酒馆页面即可，无需重启 DSH。此兼容不替代跨域和鉴权配置。
